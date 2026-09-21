@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "PDF Toolkit",
+    "version": "1.0.0",
+    "description": "A simple browser-based PDF toolkit.",
+
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_title": "PDF Toolkit"
+    },
+
+    "permissions": []
+}

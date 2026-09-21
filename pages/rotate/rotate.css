@@ -1,0 +1,616 @@
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f8fafc;
+
+    color: #0f172a;
+}
+
+
+.app {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+    height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 0 32px;
+
+    background: #ffffff;
+
+    border-bottom:
+        1px solid #e2e8f0;
+}
+
+
+.back-button {
+
+    width: 40px;
+
+    height: 40px;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+.back-button:hover {
+
+    background: #f8fafc;
+}
+
+
+.header h1 {
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+.header p {
+
+    margin-top: 4px;
+
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+
+    width:
+        min(900px, 100%);
+
+    margin: 0 auto;
+
+    padding: 40px 24px;
+}
+
+
+/* =========================
+   UPLOAD
+========================= */
+
+.upload-section {
+
+    margin-bottom: 32px;
+}
+
+
+.drop-zone {
+
+    padding: 60px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        2px dashed #cbd5e1;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    text-align: center;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+
+.drop-zone.drag-over {
+
+    background: #eff6ff;
+
+    border-color: #3b82f6;
+}
+
+
+.upload-icon {
+
+    width: 64px;
+
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    background: #eff6ff;
+
+    border-radius: 14px;
+
+    font-size: 28px;
+}
+
+
+.drop-zone h2 {
+
+    font-size: 20px;
+
+    font-weight: 600;
+}
+
+
+.drop-zone p {
+
+    margin-top: 8px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+.primary-button {
+
+    margin-top: 16px;
+
+    padding: 11px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.primary-button:hover {
+
+    background: #1d4ed8;
+}
+
+
+.upload-hint {
+
+    margin-top: 16px !important;
+
+    font-size: 12px !important;
+
+    color: #94a3b8 !important;
+}
+
+
+/* =========================
+   PDF SECTION
+========================= */
+
+.pdf-section {
+
+    padding: 24px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 12px;
+}
+
+
+.pdf-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+.pdf-header h2 {
+
+    font-size: 16px;
+}
+
+
+.pdf-header p {
+
+    margin-top: 4px;
+
+    font-size: 12px;
+
+    color: #64748b;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.secondary-button {
+
+    padding: 8px 12px;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #475569;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+
+.secondary-button:hover {
+
+    background: #f8fafc;
+}
+
+
+/* =========================
+   PAGE CONTROLS
+========================= */
+
+.page-controls {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   ROTATION
+========================= */
+
+.rotation-controls {
+
+    padding: 16px;
+
+    margin-bottom: 20px;
+
+    background: #f8fafc;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 10px;
+}
+
+
+.control-label {
+
+    margin-bottom: 10px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #334155;
+}
+
+
+.rotation-buttons {
+
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.rotation-button {
+
+    padding: 9px 14px;
+
+    border:
+        1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+
+.rotation-button:hover {
+
+    background: #eff6ff;
+
+    border-color: #93c5fd;
+}
+
+
+.rotation-button.active {
+
+    background: #2563eb;
+
+    border-color: #2563eb;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   PAGE LIST
+========================= */
+
+.page-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(180px, 1fr)
+        );
+
+    gap: 12px;
+}
+
+
+.page-item {
+
+    position: relative;
+
+    padding: 16px;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.15s ease,
+        background 0.15s ease;
+}
+
+
+.page-item:hover {
+
+    border-color: #93c5fd;
+}
+
+
+.page-item.selected {
+
+    background: #eff6ff;
+
+    border-color: #2563eb;
+}
+
+
+.page-checkbox {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    width: 18px;
+
+    height: 18px;
+
+    cursor: pointer;
+}
+
+
+.page-preview {
+
+    height: 180px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 12px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 6px;
+
+    font-size: 42px;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.page-number {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #334155;
+}
+
+
+.page-rotation {
+
+    margin-top: 4px;
+
+    font-size: 11px;
+
+    color: #64748b;
+}
+
+
+/* =========================
+   ACTION
+========================= */
+
+.action-section {
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 12px;
+}
+
+
+.selection-information {
+
+    margin-bottom: 12px;
+
+    font-size: 13px;
+
+    color: #475569;
+
+    text-align: center;
+}
+
+
+.rotate-button {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.rotate-button:hover:not(:disabled) {
+
+    background: #1d4ed8;
+}
+
+
+.rotate-button:disabled {
+
+    background: #cbd5e1;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status-message {
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border-radius: 8px;
+
+    background: #eff6ff;
+
+    color: #1d4ed8;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   UTILITIES
+========================= */
+
+.hidden {
+
+    display: none;
+}

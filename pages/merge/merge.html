@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Merge PDFs - PDF Toolkit</title>
+
+    <link rel="stylesheet" href="merge.css">
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+
+        <header class="header">
+
+            <button
+                id="backButton"
+                class="back-button"
+                type="button"
+            >
+                ←
+            </button>
+
+            <div>
+
+                <h1>
+                    Merge PDFs
+                </h1>
+
+                <p>
+                    Combine multiple PDF files into one
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- Main -->
+
+        <main class="main">
+
+            <!-- Upload Area -->
+
+            <section class="upload-section">
+
+                <div
+                    id="dropZone"
+                    class="drop-zone"
+                >
+
+                    <div class="upload-icon">
+                        📄
+                    </div>
+
+                    <h2>
+                        Drop PDF files here
+                    </h2>
+
+                    <p>
+                        or
+                    </p>
+
+                    <button
+                        id="chooseFilesButton"
+                        class="primary-button"
+                        type="button"
+                    >
+                        Choose PDF Files
+                    </button>
+
+                    <p class="upload-hint">
+                        You can select multiple PDF files
+                    </p>
+
+                </div>
+
+
+                <!-- Hidden file input -->
+
+                <input
+                    id="fileInput"
+                    type="file"
+                    accept="application/pdf,.pdf"
+                    multiple
+                    hidden
+                >
+
+            </section>
+
+
+            <!-- Selected Files -->
+
+            <section
+                id="filesSection"
+                class="files-section hidden"
+            >
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            Selected Files
+                        </h2>
+
+                        <p id="fileCount">
+                            0 files selected
+                        </p>
+
+                    </div>
+
+                    <button
+                        id="clearButton"
+                        class="secondary-button"
+                        type="button"
+                    >
+                        Clear All
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="fileList"
+                    class="file-list"
+                >
+                </div>
+
+            </section>
+
+
+            <!-- Action -->
+
+            <section
+                id="actionSection"
+                class="action-section hidden"
+            >
+
+                <button
+                    id="continueButton"
+                    class="continue-button"
+                    type="button"
+                    disabled
+                >
+                    Continue
+                </button>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../../lib/pdf-lib.min.js"></script>
+    <script src="merge.js"></script>
+
+</body>
+
+</html>

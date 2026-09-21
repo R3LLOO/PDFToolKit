@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    width: 380px;
+    min-height: 520px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f8fafc;
+
+    color: #0f172a;
+}
+
+
+.app {
+    width: 100%;
+    min-height: 520px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.header {
+    padding: 22px 20px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+
+    border-radius: 10px;
+
+    font-size: 21px;
+}
+
+
+.brand h1 {
+    font-size: 18px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+.brand p {
+    margin-top: 3px;
+
+    font-size: 12px;
+
+    color: #64748b;
+}
+
+
+/* =========================
+   TOOLS
+   ========================= */
+
+.tools {
+    flex: 1;
+
+    padding: 14px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* =========================
+   TOOL BUTTON
+   ========================= */
+
+.tool-button {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #0f172a;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        transform 0.15s ease;
+}
+
+
+.tool-button:hover {
+    background: #f8fafc;
+
+    border-color: #bfdbfe;
+
+    transform: translateY(-1px);
+}
+
+
+.tool-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   TOOL ICON
+   ========================= */
+
+.tool-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f1f5f9;
+
+    border-radius: 9px;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   TOOL TEXT
+   ========================= */
+
+.tool-content {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.tool-content strong {
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.tool-content small {
+    font-size: 11px;
+
+    color: #64748b;
+}
+
+
+/* =========================
+   ARROW
+   ========================= */
+
+.arrow {
+    color: #94a3b8;
+
+    font-size: 22px;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    padding: 12px 16px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    border-top: 1px solid #e2e8f0;
+
+    background: #ffffff;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+}

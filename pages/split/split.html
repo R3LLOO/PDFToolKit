@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Split PDF - PDF Toolkit</title>
+
+    <link
+        rel="stylesheet"
+        href="split.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header class="header">
+
+            <button
+                id="backButton"
+                class="back-button"
+                type="button"
+            >
+                ←
+            </button>
+
+            <div>
+
+                <h1>
+                    Split PDF
+                </h1>
+
+                <p>
+                    Extract selected pages from a PDF
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             MAIN
+        ========================== -->
+
+        <main class="main">
+
+
+            <!-- =========================
+                 UPLOAD SECTION
+            ========================== -->
+
+            <section class="upload-section">
+
+                <div
+                    id="dropZone"
+                    class="drop-zone"
+                >
+
+                    <div class="upload-icon">
+                        📄
+                    </div>
+
+                    <h2>
+                        Drop a PDF here
+                    </h2>
+
+                    <p>
+                        or
+                    </p>
+
+                    <button
+                        id="chooseFileButton"
+                        class="primary-button"
+                        type="button"
+                    >
+                        Choose PDF
+                    </button>
+
+                    <p class="upload-hint">
+                        Select one PDF file
+                    </p>
+
+                </div>
+
+
+                <input
+                    id="fileInput"
+                    type="file"
+                    accept="application/pdf,.pdf"
+                    hidden
+                >
+
+            </section>
+
+
+            <!-- =========================
+                 PDF INFORMATION
+            ========================== -->
+
+            <section
+                id="pdfSection"
+                class="pdf-section hidden"
+            >
+
+                <div class="pdf-header">
+
+                    <div>
+
+                        <h2>
+                            PDF Pages
+                        </h2>
+
+                        <p id="pdfInformation">
+                            0 pages
+                        </p>
+
+                    </div>
+
+                    <button
+                        id="changeFileButton"
+                        class="secondary-button"
+                        type="button"
+                    >
+                        Change PDF
+                    </button>
+
+                </div>
+
+
+                <!-- =========================
+                     PAGE CONTROLS
+                ========================== -->
+
+                <div class="page-controls">
+
+                    <button
+                        id="selectAllButton"
+                        class="secondary-button"
+                        type="button"
+                    >
+                        Select All
+                    </button>
+
+                    <button
+                        id="clearSelectionButton"
+                        class="secondary-button"
+                        type="button"
+                    >
+                        Clear Selection
+                    </button>
+
+                </div>
+
+
+                <!-- =========================
+                     PAGE LIST
+                ========================== -->
+
+                <div
+                    id="pageList"
+                    class="page-list"
+                >
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 ACTION
+            ========================== -->
+
+            <section
+                id="actionSection"
+                class="action-section hidden"
+            >
+
+                <div
+                    id="selectionInformation"
+                    class="selection-information"
+                >
+                    0 pages selected
+                </div>
+
+                <button
+                    id="splitButton"
+                    class="split-button"
+                    type="button"
+                    disabled
+                >
+                    Split PDF
+                </button>
+
+            </section>
+
+
+            <!-- =========================
+                 STATUS
+            ========================== -->
+
+            <div
+                id="statusMessage"
+                class="status-message hidden"
+            >
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- pdf-lib -->
+
+    <script src="../../lib/pdf-lib.min.js"></script>
+
+
+    <!-- Our JavaScript -->
+
+    <script src="split.js"></script>
+
+</body>
+
+</html>
