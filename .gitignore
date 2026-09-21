@@ -1,0 +1,11 @@
+# pdf.js viewer distribution - not referenced by this extension
+web/
+
+# Source maps - debug only, large
+*.map
+
+# OS / editor
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/

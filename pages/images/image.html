@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PDF Toolkit - PDF to Images</title>
+
+    <link
+        rel="stylesheet"
+        href="image.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div>
+
+                <h1>PDF to Images</h1>
+
+                <p>
+                    Convert PDF pages into PNG or JPG images.
+                </p>
+
+            </div>
+
+            <button
+                id="backButton"
+                class="back-button"
+                type="button"
+            >
+                ← Back
+            </button>
+
+        </header>
+
+
+        <!-- UPLOAD SECTION -->
+
+        <section class="card">
+
+            <div
+                id="dropZone"
+                class="drop-zone"
+            >
+
+                <div class="upload-icon">
+                    📄
+                </div>
+
+                <h2>
+                    Drop your PDF here
+                </h2>
+
+                <p>
+                    or choose a PDF from your computer
+                </p>
+
+                <label
+                    for="fileInput"
+                    class="choose-button"
+                >
+                    Choose PDF
+                </label>
+
+                <input
+                    id="fileInput"
+                    type="file"
+                    accept=".pdf,application/pdf"
+                    hidden
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- PDF INFORMATION -->
+
+        <section
+            id="pdfSection"
+            class="card hidden"
+        >
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2 id="fileName">
+                        PDF
+                    </h2>
+
+                    <p id="pageCount">
+                        0 pages
+                    </p>
+
+                </div>
+
+                <button
+                    id="changeFileButton"
+                    class="secondary-button"
+                    type="button"
+                >
+                    Change PDF
+                </button>
+
+            </div>
+
+
+            <!-- SELECTION CONTROLS -->
+
+            <div class="selection-controls">
+
+                <button
+                    id="selectAllButton"
+                    class="secondary-button"
+                    type="button"
+                >
+                    Select All
+                </button>
+
+                <button
+                    id="clearSelectionButton"
+                    class="secondary-button"
+                    type="button"
+                >
+                    Clear Selection
+                </button>
+
+            </div>
+
+
+            <!-- PAGE LIST -->
+
+            <div
+                id="pageList"
+                class="page-list"
+            ></div>
+
+        </section>
+
+
+        <!-- OUTPUT SETTINGS -->
+
+        <section
+            id="outputSection"
+            class="card hidden"
+        >
+
+            <h2>
+                Image Format
+            </h2>
+
+            <div class="format-options">
+
+                <button
+                    class="format-button active"
+                    data-format="png"
+                    type="button"
+                >
+                    <strong>PNG</strong>
+
+                    <small>
+                        Higher quality
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="format-button"
+                    data-format="jpg"
+                    type="button"
+                >
+                    <strong>JPG</strong>
+
+                    <small>
+                        Smaller files
+                    </small>
+
+                </button>
+
+            </div>
+
+
+            <!-- JPG QUALITY -->
+
+            <div
+                id="qualitySection"
+                class="quality-section hidden"
+            >
+
+                <label for="qualityRange">
+
+                    JPG Quality:
+                    <strong id="qualityValue">
+                        90%
+                    </strong>
+
+                </label>
+
+                <input
+                    id="qualityRange"
+                    type="range"
+                    min="10"
+                    max="100"
+                    value="90"
+                >
+
+            </div>
+
+
+            <!-- ACTION -->
+
+            <div class="action-section">
+
+                <div>
+
+                    <strong id="selectionCount">
+                        0 pages selected
+                    </strong>
+
+                    <span>
+                        Choose the pages you want to convert.
+                    </span>
+
+                </div>
+
+                <button
+                    id="convertButton"
+                    class="primary-button"
+                    type="button"
+                    disabled
+                >
+                    Convert to Images
+                </button>
+
+            </div>
+
+            <p
+                id="statusMessage"
+                class="status-message"
+            ></p>
+
+        </section>
+
+    </div>
+
+
+    <!-- PDF.JS is imported by image.js -->
+
+    <script
+        type="module"
+        src="image.js"
+    ></script>
+
+</body>
+
+</html>

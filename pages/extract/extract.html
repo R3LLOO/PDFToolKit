@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Extract Pages - PDF Toolkit</title>
+
+    <link
+        rel="stylesheet"
+        href="extract.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header class="header">
+
+            <button
+                id="backButton"
+                class="back-button"
+                type="button"
+            >
+                ←
+            </button>
+
+            <div>
+
+                <h1>
+                    Extract Pages
+                </h1>
+
+                <p>
+                    Create a PDF from a page range
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             MAIN
+        ========================== -->
+
+        <main class="main">
+
+
+            <!-- =========================
+                 UPLOAD SECTION
+            ========================== -->
+
+            <section class="upload-section">
+
+                <div
+                    id="dropZone"
+                    class="drop-zone"
+                >
+
+                    <div class="upload-icon">
+                        📄
+                    </div>
+
+                    <h2>
+                        Drop a PDF here
+                    </h2>
+
+                    <p>
+                        or
+                    </p>
+
+                    <button
+                        id="chooseFileButton"
+                        class="primary-button"
+                        type="button"
+                    >
+                        Choose PDF
+                    </button>
+
+                    <p class="upload-hint">
+                        Select one PDF file
+                    </p>
+
+                </div>
+
+
+                <input
+                    id="fileInput"
+                    type="file"
+                    accept="application/pdf,.pdf"
+                    hidden
+                >
+
+            </section>
+
+
+            <!-- =========================
+                 RANGE SECTION
+            ========================== -->
+
+            <section
+                id="pdfSection"
+                class="pdf-section hidden"
+            >
+
+                <div class="pdf-header">
+
+                    <div>
+
+                        <h2>
+                            Pages to extract
+                        </h2>
+
+                        <p id="pdfInformation">
+                            0 pages
+                        </p>
+
+                    </div>
+
+                    <button
+                        id="changeFileButton"
+                        class="secondary-button"
+                        type="button"
+                    >
+                        Change PDF
+                    </button>
+
+                </div>
+
+
+                <!-- =========================
+                     RANGE INPUT
+                ========================== -->
+
+                <label
+                    class="range-label"
+                    for="rangeInput"
+                >
+                    Page range
+                </label>
+
+                <input
+                    id="rangeInput"
+                    class="range-input"
+                    type="text"
+                    placeholder="e.g. 1-3, 7, 10-12"
+                    autocomplete="off"
+                >
+
+                <p class="range-hint">
+                    Use commas to separate, hyphens for
+                    ranges. Type
+                    <strong>all</strong>
+                    for every page.
+                </p>
+
+                <div
+                    id="rangeFeedback"
+                    class="range-feedback"
+                >
+                </div>
+
+
+                <!-- =========================
+                     OUTPUT MODE
+                ========================== -->
+
+                <fieldset class="output-mode">
+
+                    <legend>
+                        Output
+                    </legend>
+
+                    <label class="radio-row">
+
+                        <input
+                            type="radio"
+                            name="outputMode"
+                            value="single"
+                            checked
+                        >
+
+                        <span>
+
+                            <strong>
+                                One combined PDF
+                            </strong>
+
+                            <small>
+                                All selected pages in a
+                                single file
+                            </small>
+
+                        </span>
+
+                    </label>
+
+                    <label class="radio-row">
+
+                        <input
+                            type="radio"
+                            name="outputMode"
+                            value="separate"
+                        >
+
+                        <span>
+
+                            <strong>
+                                Separate PDFs
+                            </strong>
+
+                            <small>
+                                One file per selected page
+                            </small>
+
+                        </span>
+
+                    </label>
+
+                </fieldset>
+
+            </section>
+
+
+            <!-- =========================
+                 ACTION
+            ========================== -->
+
+            <section
+                id="actionSection"
+                class="action-section hidden"
+            >
+
+                <div
+                    id="selectionInformation"
+                    class="selection-information"
+                >
+                    0 pages selected
+                </div>
+
+                <button
+                    id="extractButton"
+                    class="extract-button"
+                    type="button"
+                    disabled
+                >
+                    Extract Pages
+                </button>
+
+            </section>
+
+
+            <!-- =========================
+                 STATUS
+            ========================== -->
+
+            <div
+                id="statusMessage"
+                class="status-message hidden"
+            >
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- pdf-lib -->
+
+    <script src="../../lib/pdf-lib.min.js"></script>
+
+
+    <!-- Our JavaScript -->
+
+    <script src="extract.js"></script>
+
+</body>
+
+</html>

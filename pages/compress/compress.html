@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PDF Toolkit - Compress PDF</title>
+
+    <link
+        rel="stylesheet"
+        href="compress.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div>
+
+                <h1>Compress PDF</h1>
+
+                <p>
+                    Reduce the size of your PDF locally.
+                </p>
+
+            </div>
+
+            <button
+                id="backButton"
+                class="back-button"
+                type="button"
+            >
+                ← Back
+            </button>
+
+        </header>
+
+
+        <!-- UPLOAD -->
+
+        <section class="card">
+
+            <div
+                id="dropZone"
+                class="drop-zone"
+            >
+
+                <div class="upload-icon">
+                    📄
+                </div>
+
+                <h2>
+                    Drop your PDF here
+                </h2>
+
+                <p>
+                    or choose a PDF from your computer
+                </p>
+
+                <label
+                    for="fileInput"
+                    class="choose-button"
+                >
+                    Choose PDF
+                </label>
+
+                <input
+                    id="fileInput"
+                    type="file"
+                    accept=".pdf,application/pdf"
+                    hidden
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- PDF INFORMATION -->
+
+        <section
+            id="pdfSection"
+            class="card hidden"
+        >
+
+            <div class="file-header">
+
+                <div>
+
+                    <h2 id="fileName">
+                        PDF
+                    </h2>
+
+                    <p id="fileSize">
+                        0 KB
+                    </p>
+
+                </div>
+
+                <button
+                    id="changeFileButton"
+                    class="secondary-button"
+                    type="button"
+                >
+                    Change PDF
+                </button>
+
+            </div>
+
+
+            <!-- FILE STATISTICS -->
+
+            <div class="stats">
+
+                <div class="stat">
+
+                    <span>
+                        Original Size
+                    </span>
+
+                    <strong id="originalSize">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span>
+                        Pages
+                    </span>
+
+                    <strong id="pageCount">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPRESSION OPTIONS -->
+
+        <section
+            id="compressionSection"
+            class="card hidden"
+        >
+
+            <h2>
+                Compression Level
+            </h2>
+
+            <p class="section-description">
+                Choose how aggressively the PDF should be optimized.
+            </p>
+
+
+            <div class="compression-options">
+
+                <button
+                    class="compression-option"
+                    data-level="low"
+                    type="button"
+                >
+
+                    <span class="option-icon">
+                        🟢
+                    </span>
+
+                    <span>
+
+                        <strong>
+                            Low Compression
+                        </strong>
+
+                        <small>
+                            Preserve more quality
+                        </small>
+
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="compression-option active"
+                    data-level="medium"
+                    type="button"
+                >
+
+                    <span class="option-icon">
+                        🟡
+                    </span>
+
+                    <span>
+
+                        <strong>
+                            Medium Compression
+                        </strong>
+
+                        <small>
+                            Balanced quality and size
+                        </small>
+
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="compression-option"
+                    data-level="high"
+                    type="button"
+                >
+
+                    <span class="option-icon">
+                        🔴
+                    </span>
+
+                    <span>
+
+                        <strong>
+                            High Compression
+                        </strong>
+
+                        <small>
+                            Prioritize smaller files
+                        </small>
+
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- ACTION -->
+
+            <div class="action-section">
+
+                <div>
+
+                    <strong>
+                        Ready to compress
+                    </strong>
+
+                    <span>
+                        Your original PDF will not be changed.
+                    </span>
+
+                </div>
+
+                <button
+                    id="compressButton"
+                    class="primary-button"
+                    type="button"
+                    disabled
+                >
+                    Compress PDF
+                </button>
+
+            </div>
+
+
+            <!-- STATUS -->
+
+            <div
+                id="statusBox"
+                class="status-box hidden"
+            >
+
+                <div class="status-row">
+
+                    <span>
+                        Original
+                    </span>
+
+                    <strong id="resultOriginal">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="status-row">
+
+                    <span>
+                        Compressed
+                    </span>
+
+                    <strong id="resultCompressed">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="status-row highlight">
+
+                    <span>
+                        Reduction
+                    </span>
+
+                    <strong id="resultReduction">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <p
+                id="statusMessage"
+                class="status-message"
+            ></p>
+
+        </section>
+
+    </div>
+
+
+    <!-- PDF-LIB -->
+
+    <script
+        src="../../lib/pdf-lib.min.js"
+    ></script>
+
+    <script
+        type="module"
+        src="compress.js"
+    ></script>
+
+</body>
+
+</html>
